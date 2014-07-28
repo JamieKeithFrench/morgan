@@ -1,0 +1,20 @@
+{% extends "layouts/main.html" %}
+{% block content %}
+    <div class="col-md-12">
+        {% if app.session.flashbag.has('error') %}
+            {% for error in app.session.flashbag.get('error') %}
+                <div class="alert alert-danger">
+                    <p>{{ error }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <form action="/search" method="get">
+            <fieldset>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="q" placeholder="Please enter a domain name..." value="{{ app.request.get('q') }}" autofocus>
+                </div>
+            </fieldset>
+            <button class="btn" type="submit">Search</button>
+        </form>
+    </div>
+{% endblock %}

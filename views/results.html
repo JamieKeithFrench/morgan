@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+{% block content %}
+    <div class="col-md-12">
+        {% if domain.records %}
+            <div class="alert alert-success">
+                <p>{{ random(phrases) }}! I found {{ domain.records|length }} {% transchoice domain.records|length %} {1} record|]1,Inf] records {% endtranschoice %} for {{ app.request.get('q') }}.</p>
+            </div>
+            {% for type, attributes in types %}
+                {% if domain.resourceRecordsByType(type) %}
+                    <div class="record">
+                        <h2 class="alert alert-info">{{ type }} Records</h2>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    {% for attribute, description in attributes %}
+                                        <th>{{ description }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for record in domain.resourceRecordsByType(type) %}
+                                    <tr>
+                                        {% for attribute, description in attributes %}
+                                            <td>{{ attribute(record, attribute) }}</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-danger">
+                <p>I could not find {{ app.request.get('q') }}.</p>
+            </div>
+        {% endif %}
+        <a class="btn" href="/">Search again?</a>
+    </div>
+{% endblock %}

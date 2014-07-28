@@ -1,0 +1,17 @@
+A: 
+    hostName: Host Name
+    type: Type
+    ipAddress: Ip Address
+AAAA:
+    hostName: Host Name
+    type: Type
+    ipAddress: Ip Address
+MX:
+    hostName: Host Name
+    type: Type
+    exchangeServer: Exchange Server
+    preference: Preference
+NS:
+    hostName: Host Name
+    type: Type
+    nameServer: Name Server

@@ -1,0 +1,25 @@
+{
+    "name": "grbsn/morgan",
+    "require": {
+        "silex/silex": "~1.2",
+        "symfony/translation": "~2.5",
+        "symfony/twig-bridge": "~2.3",
+        "symfony/validator": "~2.5",
+        "symfony/yaml": "~2.5",
+        "monolog/monolog": "~1.10",
+        "twig/twig": "~1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "George Robinson",
+            "email": "george@rbsn.me"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Morgan": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

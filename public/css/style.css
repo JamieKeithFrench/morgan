@@ -1,0 +1,147 @@
+* {
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+    background: #eff3f6;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    padding: 2em 0;
+    background: #fff;
+}
+
+header h1 {
+    font-size: 4em;
+    text-align: center;
+}
+
+header h1 a:link,
+header h1 a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+header h2 {
+    text-align: center;
+}
+
+@media screen and (max-width: 520px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header h2 {
+        font-size: 1.4em;
+    }
+}
+
+section.main {
+    margin: 5em 0;
+}
+
+@media screen and (max-width: 520px) {
+    section.main {
+        margin-top: 2em;
+    }
+}
+
+div.record h2 {
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 520px) {
+    div.record h2 {
+        font-size: 1.1em;
+    }
+}
+
+input[type="text"] {
+    border: 1px solid #d1dbe3;
+    height: 80px;
+    padding: 10px 20px;
+    font-size: 1.4em;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #b6c8d6;
+    outline: none;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 520px) {
+    input[type="text"] {
+        height: 50px;
+        font-size: 0.9em;
+    }
+}
+
+.alert {
+    font-size: 1.2em;
+    border-radius: 0;
+}
+
+@media screen and (max-width: 520px) {
+    .alert {
+        font-size: 0.9em;
+    }
+}
+
+table.table {
+    font-size: 1.2em;
+    background: #fff;
+    text-align: center;
+    border-top-color: #8f8a78;
+}
+
+table.table thead {
+    background: #c9c5b7;
+    background-image: -webkit-linear-gradient(top, #c9c5b7 0, #b3ad9b 100%);
+    background-image: -o-linear-gradient(top, #c9c5b7 0, #b3ad9b 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#c9c5b7), to(#b3ad9b));
+    background-image: linear-gradient(to bottom, #c9c5b7 0, #b3ad9b 100%);
+}
+
+table.table thead th {
+    color: #363430;
+    padding: 1em;
+    text-align: center;
+    font-weight: normal;
+    border-color: #8f8a78;
+}
+
+table.table tbody td {
+    padding: 1em;
+}
+
+@media screen and (max-width: 680px) {
+    table.table {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    table.table {
+        font-size: 0.8em;
+    }
+}
+
+.btn {
+    width: 100%;
+    border: 1px solid #d1dbe3;
+    padding: 0.5em;
+    font-size: 2em;
+    background: #fff;
+    border-radius: 0;
+}
+
+@media screen and (max-width: 520px) {
+    .btn {
+        padding: 1em;
+        font-size: 1em;
+    }
+}
