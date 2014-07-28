@@ -35,7 +35,6 @@ class ResourceRecordLocator {
                     $domain->addRecord(new A($hostName, $timeToLive, $value['ip']));
                     break;
                 case 'AAAA':
-                    var_dump($value);
                     $domain->addRecord(new AAAA($hostName, $timeToLive, $value['ipv6']));
                     break;
                 case 'MX':
