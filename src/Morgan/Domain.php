@@ -48,7 +48,7 @@ class Domain {
      * @return array The array of records matching the specified type.
      */
     public function getResourceRecordsByType($type) {
-        return array_filter($this->records, function($r) use ($type) {  return $r->getType() == $type; });
+        return array_filter($this->records, function($r) use ($type) { return $r->getType() == $type; });
     }
 
     /**
