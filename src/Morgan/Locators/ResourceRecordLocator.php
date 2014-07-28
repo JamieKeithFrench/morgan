@@ -18,7 +18,7 @@ class ResourceRecordLocator {
         $domain = new Domain($domainName);
 
         /*
-         * Pushes each resource recordto the array of records for the domain.
+         * Pushes each resource record to the array of records for the domain.
          *
          * The dns_get_record function returns an array of resource records for
          * the domain name. We instantiate an object appropriate for the type of
